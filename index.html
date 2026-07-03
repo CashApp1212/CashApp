@@ -426,5 +426,31 @@
     <i class="fas fa-shield-alt" style="margin-right: 6px;"></i> Keamanan berlapis · terdaftar OJK
   </div>
 </div>
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyA9EnwfBORkUL-bVRCQPDrn264EQd35HgE",
+  authDomain: "cashapp-af60c.firebaseapp.com",
+  projectId: "cashapp-af60c",
+  storageBucket: "cashapp-af60c.firebasestorage.app",
+  messagingSenderId: "817638467994",
+  appId: "1:817638467994:web:985d1b449c72efffbb7223",
+  measurementId: "G-G8TCDBEBDX"
+};
+
+const app = initializeApp(firebaseConfig);
+
+window.auth = getAuth(app);
+window.db = getFirestore(app);
+
+console.log("✅ Firebase Connected!");
+
+</script>
+
 </body>
 </html>
